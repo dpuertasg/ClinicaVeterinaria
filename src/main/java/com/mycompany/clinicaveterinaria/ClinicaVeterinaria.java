@@ -5,6 +5,12 @@
 package com.mycompany.clinicaveterinaria;
 
 import modelos.Consulta;
+import modelos.Propietario;
+import modelos.Animal;
+import modelos.Veterinario;
+import modelos.Mascota;
+import modelos.Medicamento;
+import modelos.Persona;
 
 /**
  *
