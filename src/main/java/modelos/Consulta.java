@@ -21,6 +21,11 @@ public class Consulta {
         this.fecha = fecha;
     }
 
+    @Override
+    public String toString() {
+        return "Consulta{" + "medicamentos=" + medicamentos + ", fecha=" + fecha + '}';
+    }
+
     public List<Medicamento> getMedicamentos() {
         return medicamentos;
     }

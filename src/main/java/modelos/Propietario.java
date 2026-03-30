@@ -56,6 +56,7 @@ public class Propietario extends Persona {
     }
 
     public void mostrarDatosPropietario(){
+        System.out.println("los datos del propietario son: ");
         System.out.println("nombre: " + getNombre() + " edad: " + getEdad() + " telefono: " + telefono + " direccion: " + direccion);
     }
     

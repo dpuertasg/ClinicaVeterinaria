@@ -35,7 +35,13 @@ public class ClinicaVeterinaria {
         propietario.agregarMascota(mascota);
         propietario.mostrarMascota();
         //veterinario- consulta
-        
-        
+        List<Consulta> Listconsultas = new ArrayList<>();
+        Veterinario vet = new Veterinario("Medicina general","320512",Listconsultas, "Dr. Jimenez",30);
+        Consulta consulta1 = new Consulta("31/10/2026");
+        vet.agregarConsulta(consulta1);
+        vet.mostrarConsultas();
+        //veterinario-medicamento
+        vet.recetar(consulta);
     }
-    }
+}
+        
