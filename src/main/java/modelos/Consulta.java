@@ -49,5 +49,9 @@ public class Consulta {
     public void mostrarConsulta() {
         System.out.println("Fecha: " + fecha);
     }
+    public void mostrarMedicamento(){
+        for(int i = 0; i < medicamentos.size();i++)
+        System.out.println("Medicamento: "+ medicamentos.get(i));
+    }
 }
 

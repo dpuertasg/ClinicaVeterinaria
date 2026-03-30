@@ -20,6 +20,11 @@ public class Medicamento {
         this.dosis = dosis;
     }
 
+    @Override
+    public String toString() {
+        return "Medicamento{" + "nombre=" + nombre + ", dosis=" + dosis + '}';
+    }
+
     public String getNombre() {
         return nombre;
     }

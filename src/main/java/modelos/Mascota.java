@@ -26,6 +26,11 @@ public class Mascota extends Animal {
         this.tipo = tipo;
     }
 
+    @Override
+    public String toString() {
+        return "Mascota{" + "nombre=" + nombre + ", tipo=" + tipo + '}';
+    }
+
     public String getNombre() {
         return nombre;
     }

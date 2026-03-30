@@ -4,6 +4,8 @@
  */
 package modelos;
 import java.util.ArrayList;
+import java.util.List;
+import modelos.Mascota;
 /**
  *
  * @author USER
@@ -11,24 +13,24 @@ import java.util.ArrayList;
 public class Propietario extends Persona {
     private int telefono;
     private String direccion;
-    private ArrayList<Mascota> Mascota;
+    private List<Mascota> mascotas;
     
     public Propietario() {
     }
 
-    public Propietario(int telefono, String direccion, ArrayList<Mascota> Mascota) {
+    public Propietario(int telefono, String direccion, List<Mascota> mascotas) {
         this.telefono = telefono;
         this.direccion = direccion;
-        this.Mascota = Mascota;
+        this.mascotas = mascotas;
     }
 
-    public Propietario(int telefono, String direccion, ArrayList<Mascota> Mascota, String nombre, int edad) {
+    public Propietario(int telefono, String direccion, String nombre, int edad, List<Mascota> mascotas) {
         super(nombre, edad);
         this.telefono = telefono;
         this.direccion = direccion;
-        this.Mascota = Mascota;
+        this.mascotas = mascotas;
     }
-    
+
     public int getTelefono() {
         return telefono;
     }
@@ -37,10 +39,9 @@ public class Propietario extends Persona {
         return direccion;
     }
 
-    public ArrayList<Mascota> getMascota() {
-        return Mascota;
+    public List<Mascota> getMascotas() {
+        return mascotas;
     }
-
 
     public void setTelefono(int telefono) {
         this.telefono = telefono;
@@ -50,8 +51,23 @@ public class Propietario extends Persona {
         this.direccion = direccion;
     }
 
-    public void setMascota(ArrayList<Mascota> Mascota) {
-        this.Mascota = Mascota;
+    public void setMascotas(List<Mascota> mascotas) {
+        this.mascotas = mascotas;
+    }
+
+    public void mostrarDatosPropietario(){
+        System.out.println("nombre: " + getNombre() + " edad: " + getEdad() + " telefono: " + telefono + " direccion: " + direccion);
+    }
+    
+    public void agregarMascota(Mascota m) {
+       mascotas.add(m);
+    }
+    
+    public void mostrarMascota(){
+        System.out.println("las mascotas del propietario son: ");
+        for(int i = 0; i < mascotas.size();i++){
+        System.out.println("Mascota: "+ mascotas.get(i));
+        }
     }
 
 }
