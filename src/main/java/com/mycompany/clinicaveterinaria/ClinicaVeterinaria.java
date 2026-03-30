@@ -4,6 +4,8 @@
 
 package com.mycompany.clinicaveterinaria;
 
+import modelos.Consulta;
+
 /**
  *
  * @author USER
@@ -11,6 +13,10 @@ package com.mycompany.clinicaveterinaria;
 public class ClinicaVeterinaria {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+       Consulta consulta = new Consulta("29/03/2026");
+        consulta.agregarMedicamento("Antibiótico", "2 veces al día");
+        consulta.agregarMedicamento("Vitaminas", "1 vez al día");
+
+        consulta.mostrarConsulta();
     }
-}
+    }

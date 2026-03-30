@@ -36,5 +36,18 @@ public class Consulta {
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
-    
+    public Consulta(String fecha) {
+        this.fecha = fecha;
+        this.medicamentos = new ArrayList<>();
+    }
+
+    public void agregarMedicamento(String nombre, String dosis) {
+        // La Consulta crea el Medicamento → composición
+        medicamentos.add(new Medicamento(nombre, dosis));
+    }
+
+    public void mostrarConsulta() {
+        System.out.println("Fecha: " + fecha);
+    }
 }
+
